@@ -11,6 +11,7 @@ const isAuthenticated = async (req: Request, res: Response, next: NextFunction):
   }
 
   const session = await SessionRepository.findByToken(token);
+  // retur complete session object :)
   console.log('🔍 Found session:', session);
 
   if (!session) {
