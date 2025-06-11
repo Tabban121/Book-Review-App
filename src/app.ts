@@ -14,6 +14,7 @@ app.use(express.json());
 app.get('/', (req: Request, res: Response) => {
   res.send('Book Review API Running');
 });
+// routes usage :)
 app.use('/api/auth', authRoutes);
 
 
