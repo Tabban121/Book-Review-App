@@ -1,8 +1,10 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import authRoutes from './routes/authRoutes';
+import authRoutes from './routes/auth.routes';
 import { connectDB } from './config/db';
+import book_router from './routes/book.routes';
+
 
 dotenv.config();
 
@@ -16,6 +18,8 @@ app.get('/', (req: Request, res: Response) => {
 });
 // routes usage :)
 app.use('/api/auth', authRoutes);
+app.use('/api/books', book_router);
+
 
 
 connectDB();
