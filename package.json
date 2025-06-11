@@ -1,0 +1,47 @@
+{
+  "name": "book-review-app",
+  "version": "1.0.0",
+  "description": "A backend for Book Review App built with Express, TypeScript, and MongoDB.",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "nodemon --exec ts-node src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tabban121/Book-Review-App.git"
+  },
+  "keywords": [
+    "book",
+    "review",
+    "express",
+    "typescript",
+    "mongo"
+  ],
+  "author": "Tabban121",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tabban121/Book-Review-App/issues"
+  },
+  "homepage": "https://github.com/Tabban121/Book-Review-App#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^20.4.2",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
