@@ -14,8 +14,8 @@ COPY . .
 # Build the TypeScript app
 RUN npm run build
 
-# Expose the port your app runs on (example: 8000)
-EXPOSE 8000
+# Expose the port your app runs on (example: 5000)
+EXPOSE 5000
 
 # Run the app
 CMD ["npm", "start"]
