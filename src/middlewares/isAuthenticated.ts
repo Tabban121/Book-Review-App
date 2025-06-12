@@ -1,6 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
 import { SessionRepository } from '../repositories/session.repository';
-
 const isAuthenticated = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   const authHeader = req.headers.authorization;
   const token = authHeader && authHeader.split(' ')[1];
@@ -11,7 +10,6 @@ const isAuthenticated = async (req: Request, res: Response, next: NextFunction):
   }
 
   const session = await SessionRepository.findByToken(token);
-  // retur complete session object :)
   console.log('🔍 Found session:', session);
 
   if (!session) {
@@ -19,7 +17,10 @@ const isAuthenticated = async (req: Request, res: Response, next: NextFunction):
     return;
   }
 
+  // ✅ Add to both res.locals and req.user for compatibility
   res.locals.userId = session.user.toString();
+  (req as any).user = { id: session.user.toString() }; 
+
   next();
 };
 

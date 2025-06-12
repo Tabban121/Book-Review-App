@@ -14,5 +14,5 @@ export const BookRepository = {
 
   findById: (id: string) => Book.findById(id),
   
-  findAll: () => Book.find().populate('user', 'email'), // optional populate
+  findAll: () => Book.find().populate('user', 'email'), 
 };

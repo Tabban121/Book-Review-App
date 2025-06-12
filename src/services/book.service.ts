@@ -25,4 +25,4 @@ export const BookService = {
 
   getBooksByUser: (userId: string) => BookRepository.findByUser(userId),
 };
-// This service layer abstracts the business logic and interacts with the repository layer.
+
