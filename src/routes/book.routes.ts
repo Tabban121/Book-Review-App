@@ -9,6 +9,6 @@ book_router.post('/', isAuthenticated, BookController.create);
 book_router.put('/:id', isAuthenticated, BookController.update);
 book_router.delete('/:id', isAuthenticated, BookController.remove);
 book_router.get('/:id', BookController.getOne);        
-book_router.get('/', BookController.getAll);           
+book_router.get('/', BookController.getAllBooks);           
 
 export default book_router;
